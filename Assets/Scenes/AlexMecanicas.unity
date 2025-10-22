@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 386892627}
   - component: {fileID: 386892626}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: PlataformaCorta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,32 +217,13 @@ GameObject:
   - component: {fileID: 1058142166}
   - component: {fileID: 1058142165}
   - component: {fileID: 1058142164}
-  - component: {fileID: 1058142163}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1058142163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058142162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8e091d85cb8cb43a338477660a46c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  groundCheck: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  tr: {fileID: 0}
 --- !u!50 &1058142164
 Rigidbody2D:
   serializedVersion: 5

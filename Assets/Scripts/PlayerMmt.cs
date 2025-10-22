@@ -1,15 +1,15 @@
 using UnityEngine;
 using System.Collections;
-public class PlayerMovement : MonoBehaviour
+public class PlayerMmt : MonoBehaviour
 {
     private float horizontal;
     private float speed = 8f;
-    private float jumpingPower = 16f;
+    [SerializeField] private float jumpingPower = 5f;
     //private bool isFacingRight = true;
 
     private bool canDash = true;
     private bool isDashing;
-    private float dashingPower = 24f;
+    [SerializeField] private float dashingPower = 5f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
@@ -17,8 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
-
-    private void Update()
+    void Update()
     {
         if (isDashing)
         {
@@ -39,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
-        //Flip();
     }
     private void FixedUpdate()
     {
@@ -53,16 +51,6 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
-    /* void Flip()
-    {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
-        {
-            Vector3 localScale = transform.localScale;
-            isFacingRight = !isFacingRight;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
-    }*/
     private IEnumerator Dash()
     {
         canDash = false;
